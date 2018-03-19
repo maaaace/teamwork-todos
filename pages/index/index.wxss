@@ -1,3 +1,10 @@
+.team-block {
+  border: 1rpx solid #e0e0e0;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  margin-bottom: 15rpx;
+}
+
 .header {
   display: flex;
   align-items: center;
