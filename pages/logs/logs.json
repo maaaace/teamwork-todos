@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "LOGS « TODOS"
+  "component": true,
+  "usingComponents": {}
 }

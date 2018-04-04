@@ -1,60 +1,13 @@
 <view class="container">
-<view class="team-block">
-    <text>Group Todos</text>
-    <view class="header">
-      <image class="plus" src="../../assets/plus.png"/>
-      <input class="new-todo" value="{{ groupInput }}" placeholder="Anything here..." auto-focus bindinput="groupInputChangeHandle" bindconfirm="addGroupTodoHandle"/>
-    </view>
-    <block wx:if="{{ groupTodos.length }}">
-      <view class="todos">
-        <!-- List items should get the class `completed` when marked as completed -->
-        <view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ groupTodos }}" wx:key="{{ index }}" bindtap="toggleGroupTodoHandle" data-index="{{ index }}">
-          <!-- completed: success, todo: circle -->
-          <icon class="checkbox" type="{{ item.completed ? 'success' : 'circle' }}"/>
-          <text class="name">{{ item.name }}</text>
-          <icon class="remove" type="clear" size="16" catchtap="removeGroupTodoHandle" data-index="{{ index }}"/>
-        </view>
+  <view class="team-block" style="text-align : center">
+      <text>下拉添加1</text>
+      <text>双击编辑1</text>
+      <text>右滑完成</text>
+      <text>左滑删除</text>
+      <view class='item-cntr'>
+        <view style="{{textStyle}}" catch:touchstart="handleTouchS" catch:touchmove="handleTouchM" catch:touchend="handleTouchE" class='item' >测试数据1</view>
+        <view class="del">删除</view>
       </view>
-      <view class="footer">
-        <text class="btn" bindtap="toggleAllGroupHandle">Toggle all</text>
-        <text wx:if="{{ groupLeftCount }}">{{ groupLeftCount }} {{ groupLeftCount === 1 ? 'item' : 'items' }} left</text>
-        <text class="btn" wx:if="{{ groupTodos.length > groupLeftCount }}" bindtap="clearGroupCompletedHandle">Clear completed</text>
-      </view>
-    </block>
-    <block wx:else>
-      <view class="empty">
-        <text class="title">Congratulations!</text>
-        <text class="content">There's no more group work left.</text>
-      </view>
-    </block>
-  </view>
-  <view class="team-block">
-    <text>Personal Todos</text>
-    <view class="header">
-      <image class="plus" src="../../assets/plus.png"/>
-      <input class="new-todo" value="{{ personalInput }}" placeholder="Anything here..." auto-focus bindinput="inputChangeHandle" bindconfirm="addTodoHandle"/>
-    </view>
-    <block wx:if="{{ personalTodos.length }}">
-      <view class="todos">
-        <!-- List items should get the class `completed` when marked as completed -->
-        <view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ personalTodos }}" wx:key="{{ index }}" bindtap="toggleTodoHandle" data-index="{{ index }}">
-          <!-- completed: success, todo: circle -->
-          <icon class="checkbox" type="{{ item.completed ? 'success' : 'circle' }}"/>
-          <text class="name">{{ item.name }}</text>
-          <icon class="remove" type="clear" size="16" catchtap="removeTodoHandle" data-index="{{ index }}"/>
-        </view>
-      </view>
-      <view class="footer">
-        <text class="btn" bindtap="toggleAllHandle">Toggle all</text>
-        <text wx:if="{{ personalLeftCount }}">{{ personalLeftCount }} {{ personalLeftCount === 1 ? 'item' : 'items' }} left</text>
-        <text class="btn" wx:if="{{ personalTodos.length > personalLeftCount }}" bindtap="clearCompletedHandle">Clear completed</text>
-      </view>
-    </block>
-    <block wx:else>
-      <view class="empty">
-        <text class="title">Congratulations!</text>
-        <text class="content">There's no more personal work left.</text>
-      </view>
-    </block>
+      
   </view>
 </view>
