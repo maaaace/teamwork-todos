@@ -1,0 +1,9 @@
+{
+    "navigationBarBackgroundColor": "#2dc8b7",
+    "enablePullDownRefresh": true,
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "任务清单",
+    "usingComponents": {
+        "slide-delete": "/components/slide-delete/slide-delete"
+    }
+}

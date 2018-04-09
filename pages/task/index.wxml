@@ -1,0 +1,41 @@
+<form bindsubmit="submitForm">
+    <view class="weui-cells">
+    <input name="id" value="{{ form.id }}" hidden type="text" placeholder="" />
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">名称</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input name="name" value="{{ form.name }}" class="weui-input" type="text" placeholder="" />
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">描述</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input name="description" value="{{ form.description }}" class="weui-input" type="text" placeholder="" />
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">优先级</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input name="pori" value="{{ form.pori }}" class="weui-input" type="text" placeholder="" />
+            </view>
+        </view>
+        
+    </view>
+    <view class="weui-cells">
+        <view class="weui-cell weui-cell_switch">
+            <view class="weui-cell__bd">设为默认</view>
+            <view class="weui-cell__ft">
+                <switch name="is_def" checked="{{ form.is_def }}" />
+            </view>
+        </view>
+    </view>
+    <view class="button-sp-area">
+        <button class="weui-btn" type="primary" formType="submit">确定</button>
+    </view>
+</form>
